@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Reporting</title>
+    <link rel="stylesheet" type="text/css" href="reporting.css" />
+  </head>
+  <body>
+    <div class="menu">
+      <div class="menu-item" style="width: 40%">
+        <button onclick="window.location.href='newReport.html'">Новый отчет</button>
+      </div>
+      <div class="menu-item" style="width: 40%">
+        <button onclick="window.location.href='savedReport.html'">Сохраненные отчеты</button>
+      </div>
+      <div class="menu-item" style="width: 20%">
+        <button onclick="window.location.href='index.html'">Выход</button>
+      </div>
+    </div>
+    <div class="container">
+      <h2>Выберите отчетный период</h2>
+      <form id="periodForm" action="newReport.html">
+        <div class="form-field">
+          <label for="month">Месяц:</label>
+          <select id="month" required>
+            <option value="" disabled selected>Выберите месяц</option>
+            <option value="1">Январь</option>
+            <option value="2">Февраль</option>
+            <option value="3">Март</option>
+            <option value="4">Апрель</option>
+            <option value="5">Май</option>
+            <option value="6">Июнь</option>
+            <option value="7">Июль</option>
+            <option value="8">Август</option>
+            <option value="9">Сентябрь</option>
+            <option value="10">Октябрь</option>
+            <option value="11">Ноябрь</option>
+            <option value="12">Декабрь</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="year">Год:</label>
+          <input type="number" id="year" placeholder="Введите год" required />
+        </div>
+        <button type="submit">Далее</button>
+      </form>
+    </div>
+  </body>
+</html>

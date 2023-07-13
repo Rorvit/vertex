@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>New Report</title>
+    <link rel="stylesheet" type="text/css" href="newReport.css" />
+  </head>
+  <body>
+    <div class="menu">
+      <div class="menu-item" style="width: 40%">
+        <button onclick="window.location.href='reporting.html'">Новый отчет</button>
+      </div>
+      <div class="menu-item" style="width: 15%">
+        <button onclick="window.location.href='savedReport.html'">Сохраненные отчеты</button>
+      </div>
+      <div class="menu-item" style="width: 20%">
+        <button onclick="window.location.href='index.html'">Выход</button>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2>Заполните статьи расходов</h2>
+      <form id="expensesForm">
+        <div class="expense-field">
+          <label for="representative">Представительские расходы:</label>
+          <input type="number" id="representative" placeholder="Сумма" required />
+          <input type="file" id="representativeFile" accept=".pdf,.doc,.docx" />
+        </div>
+        <div class="expense-field">
+          <label for="businessTrip">Командировочные расходы:</label>
+          <input type="number" id="businessTrip" placeholder="Сумма" required />
+          <input type="file" id="businessTripFile" accept=".pdf,.doc,.docx" />
+        </div>
+        <div class="expense-field">
+          <label for="car">Расходы на автомобиль:</label>
+          <input type="number" id="car" placeholder="Сумма" required />
+          <input type="file" id="carFile" accept=".pdf,.doc,.docx" />
+        </div>
+        <div class="expense-field">
+          <label for="other">Прочие расходы:</label>
+          <input type="number" id="other" placeholder="Сумма" required />
+          <input type="file" id="otherFile" accept=".pdf,.doc,.docx" />
+        </div>
+        <div class="expense-field">
+          <label for="total">Итоговая сумма:</label>
+          <input type="number" id="total" readonly />
+        </div>
+        <button type="submit">Сохранить</button>
+        <button type="button">Отправить на проверку</button>
+      </form>
+    </div>
+    <script src="newReport.js"></script>
+  </body>
+</html>
